@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Billie Jean</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./SongLyrics.js" ></script>
+
+    <style>
+        .currentBeat {
+            font-weight: bold;
+            color: red;
+            font-size: large;
+        }
+       
+        #words {
+            overflow-y: scroll;
+            height: 800px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    /* Test */
+    "use strict";
+
+    currentBeat = 1;
+    bpm = 105;
+    scrollSpeedSeconds = 4; 
+
+</script>
+
+
+
+    <section>
+        <div class="container">
+            <div class="p-2">
+                <button id="btnStart" type="button" class="button is-primary">Start</button>
+                <button id="btnStop" type="button" class="button is-danger" >Stop</button>
+
+                <a class="button is-link" href="./Index.html">Back to menu</a>
+
+                <label id="currentLine"></label>
+            </div>
+        
+            <div>
+                <span>
+                    <label id="label1">1</label>
+                    <label id="label2">2</label>
+                    <label id="label3">3</label>
+                    <label id="label4">4</label>
+                </span>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="words" class="container has-text-centered" >
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" data-pause="50">Verse 1</p>
+            
+            <p class="lyric">She was more like a beauty queen from a movie scene</p>
+            <p class="lyric">I said don't mind, but what do you mean, I am the one</p>
+            <p class="lyric">Who will dance on the floor in the round?</p>
+            <p class="lyric">She said I am the one, who will dance on the floor in the round</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 2</p>
+            <p class="lyric">She told me her name was Billie Jean, as she caused a scene</p>
+            <p class="lyric">Then every head turned with eyes that dreamed of being the one</p>
+            <p class="lyric">Who will dance on the floor in the round</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">B Section</p>
+
+            <p class="lyric">People always told me be careful of what you do</p>
+            <p class="lyric">And don't go around breaking young girls' hearts</p>
+            <p class="lyric">And mother always told me be careful of who you love</p>
+            <p class="lyric">And be careful of what you do 'cause the lie becomes the truth</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>
+
+            <p class="lyric">Billie Jean is not my lover</p>
+            <p class="lyric">She's just a girl who claims that I am the one</p>
+            <p class="lyric">But the kid is not my son</p>
+            <p class="lyric">She says I am the one, but the kid is not my son</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 3</p>
+
+            <p class="lyric">For forty days and forty nights</p>
+            <p class="lyric">The law was on her side</p>
+            <p class="lyric">But who can stand when she's in demand</p>
+            <p class="lyric">Her schemes and plans</p>
+            <p class="lyric">'Cause we danced on the floor in the round</p>
+            <p class="lyric">So take my strong advice, just remember to always think twice</p>
+            <p class="lyric">(Do think twice, do think twice)</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 4</p>
+
+            <p class="lyric">She told my baby we'd danced 'til three, then she looked at me</p>
+            <p class="lyric">Then showed a photo my baby cried his eyes were like mine (oh, no)</p>
+            <p class="lyric">'Cause we danced on the floor in the round, baby</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">B Section</p>
+
+            <p class="lyric">People always told me be careful of what you do</p>
+            <p class="lyric">And don't go around breaking young girls' hearts</p>
+            <p class="lyric">She came and stood right by me</p>
+            <p class="lyric">Just the smell of sweet perfume</p>
+            <p class="lyric">This happened much too soon</p>
+            <p class="lyric">She called me to her room</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>
+            <p class="lyric">Billie Jean is not my lover</p>
+            <p class="lyric">She's just a girl who claims that I am the one</p>
+            <p class="lyric">But the kid is not my son</p>
+            <p class="lyric">Billie Jean is not my lover</p>
+            <p class="lyric">She's just a girl who claims that I am the one</p>
+            <p class="lyric">But the kid is not my son</p>
+            <p class="lyric">She says I am the one, but the kid is not my son</p>
+            <p class="lyric">She says I am the one, but the kid is not my son</p>
+            <p class="lyric">Billie Jean is not my lover</p>
+            <p class="lyric">She's just a girl who claims that I am the one</p>
+            <p class="lyric">But the kid is not my son</p>
+            <p class="lyric">She says I am the one, but the kid is not my son</p>
+            <p class="lyric">She says I am the one</p>
+            <p class="lyric">You know what you did, (she says he is my son) breaking my heart babe</p>
+            <p class="lyric">She says I am the one</p>
+            <p class="lyric">Billie Jean is not my lover</p>
+            <p class="lyric">Billie Jean is not my lover</p>
+            <p class="lyric">Billie Jean is not my lover</p>
+            <p class="lyric">Billie Jean is not my lover (don't Billie Jean)</p>
+            <p class="lyric">Billie Jean is not my lover</p>
+            <p class="lyric">Billie Jean is not my lover</p>
+
+
+    </div>
+</section>
+</body>
+
+
