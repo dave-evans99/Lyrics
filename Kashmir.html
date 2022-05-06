@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kashmir</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        .currentBeat {
+            font-weight: bold;
+            color: red;
+            font-size: large;
+        }
+       
+        #words {
+            overflow-y: scroll;
+            height: 800px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    var currentBeat = 1;
+    var bpm = 80;
+    var scrollSpeedSeconds = 9;
+    
+    var currentStartLine = 1;
+    var offsetCount = 0;
+    var beatTimer, lineScrollTimer;
+    var pauseUntil;
+
+    function highlightRows(scroll) {
+        let wordsDiv = $('#words');
+        /*        
+        if (scroll) {
+            wordsDiv.animate({
+                scrollTop: wordsDiv[0].scrollTop + 25 
+            }, 100);
+        }
+        */
+
+        $currentLine = $('#words p:nth-child(' + currentStartLine + ')');
+        
+        if ($currentLine.length > 0) {
+            $('#words p:nth-child(' + currentStartLine + ')')[0].scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+        
+        $('p').removeClass('has-background-primary has-background-info has-text-white is-size-5 mg-small pl-3 mt-2 mb-2'); 
+
+        let selector = '';
+
+        if (currentStartLine == 1) {
+            selector = '#words p:lt(10)';
+        }
+        else
+            selector = '#words p:gt(' + (currentStartLine - 1) + '):lt(10)';
+
+        let $lines = $(selector);
+        
+        $lines.filter('.lyric').addClass('has-background-primary has-text-white is-size-5 mg-small pl-3');
+        $lines.filter('.music').addClass('has-background-info has-text-white is-size-5 mg-small pl-3 mt-2 mb-2')
+                                .removeClass('is-hidden');
+        
+                        
+    }
+
+    $(function() {
+
+        $('#btnStop').hide();
+
+        $('#btnStart').click(function() {
+
+            $('#btnStop').show();
+            $('#btnStart').hide();
+
+            highlightRows(false);
+
+            lineScrollTimer = window.setInterval(function() {
+
+                $('#currentLine').html('here');
+
+                if (pauseUntil != null && new Date() > pauseUntil) {
+                    pauseUntil = null;
+                    currentStartLine++;        
+                }
+
+                if (pauseUntil != null && new Date() < pauseUntil)
+                    return;
+                
+                let currentPause = $('#words p:nth-child(' + currentStartLine + ')').data('pause');
+
+                highlightRows(true);
+                    
+                if (currentPause == undefined) {
+                    currentStartLine++;
+                }
+                else {
+
+                    let t = new Date();
+                    t.setSeconds(t.getSeconds() + currentPause);
+
+                    pauseUntil = t;    
+                }
+
+           
+            },
+            1000 * scrollSpeedSeconds);
+
+
+            beatTimer = window.setInterval(function() {
+
+                let currentLabel = '#label' + currentBeat;
+
+                $('label').removeClass('currentBeat');
+                $(currentLabel).addClass('currentBeat');
+
+                if (currentBeat == 4)
+                    currentBeat = 1;
+                else
+                    currentBeat++;
+                }
+                , 1000 * 60 / bpm);
+
+        });
+
+        $('#btnStop').click(function() {
+            clearInterval(beatTimer);
+            clearInterval(lineScrollTimer);
+
+            $('#btnStart').show();
+            $('#btnStop').hide();
+
+        });
+
+    });
+
+</script>
+
+
+
+    <section>
+        <div class="container">
+            <div class="p-2">
+                <button id="btnStart" type="button" class="button is-primary">Start</button>
+                <button id="btnStop" type="button" class="button is-danger" >Stop</button>
+                <label id="currentLine"></label>
+            </div>
+        
+            <div>
+                <span>
+                    <label id="label1">1</label>
+                    <label id="label2">2</label>
+                    <label id="label3">3</label>
+                    <label id="label4">4</label>
+                </span>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="words" class="container has-text-centered" >
+  
+
+            <p class="lyric" data-pause="35">Oh, let the sun beat down upon my face</p>
+            <p class="lyric" >With stars to fill my dreams</p>
+            <p class="lyric">I am a traveler of both time and space</p>
+            <p class="lyric">To be where I have been</p>
+            <p class="lyric" >Sit with elders of the gentle race</p>
+            <p class="lyric">This world has seldom seen</p>
+            <p class="lyric">Talk of days for which they sit and wait</p>
+            <p class="lyric">All will be revealed</p>
+            
+            <p class="music is-hidden">Descending chords</p>
+            
+            <p class="lyric">Talk and song from tongues of lilting grace</p>
+            <p class="lyric">Whose sounds caress my ear</p>
+            <p class="lyric">But not a word I heard could I relate</p>
+            <p class="lyric">The story was quite clear</p>
+            <p class="lyric">Oh, oh</p>
+            <p class="lyric">Oh, oh</p>
+            
+            <p class="music is-hidden" >Descending chords</p>
+            <p class="music is-hidden">Descending chords</p>
+            <p class="music is-hidden">Staccato section</p>
+            
+            <p class="lyric">Ooh, baby, I been flying</p>
+            <p class="lyric">No yeah, mama, there ain't no denying</p>
+            <p class="lyric">Oh, ooh, yeah I've been flying</p>
+            <p class="lyric">Mama, mama, ain't no denying, no denying</p>
+            
+            <p class="music is-hidden">Descending chords</p>
+            <p class="music is-hidden">Break section</p>
+            
+            <p class="lyric">Oh, all I see turns to brown</p>
+            <p class="lyric">As the sun burns the ground</p>
+            <p class="lyric">And my eyes fill with sand</p>
+            <p class="lyric">As I scan this wasted land</p>
+            <p class="lyric">Trying to find, trying to find, where I've been</p>
+            
+            <p class="lyric">Oh, pilot of the storm who leaves no trace</p>
+            <p class="lyric">Like thoughts inside a dream</p>
+            <p class="lyric">Here is the path that led me to that place</p>
+            <p class="lyric">Yellow desert stream</p>
+            <p class="lyric">My Shangri-La beneath the summer moon</p>
+            <p class="lyric">I will return again</p>
+            <p class="lyric">Sure as the dust that floats high in June</p>
+            <p class="lyric">When moving through Kashmir</p>
+            
+            <p class="music is-hidden">Descending chords</p>
+            
+            <p class="lyric">Oh, father of the four winds, fill my sails</p>
+            <p class="lyric">Across the sea of years</p>
+            <p class="lyric">With no provision but an open face</p>
+            <p class="lyric">Along the straits of fear</p>
+            <p class="lyric">Oh, oh</p>
+            <p class="lyric">Oh, oh</p>
+            
+            <p class="lyric">Ooh</p>
+            
+            <p class="music is-hidden">Descending chords</p>
+            <p class="music is-hidden">Main Riff</p>
+            <p class="music is-hidden">Descending chords</p>
+            <p class="music is-hidden">Break section</p>
+            
+            <p class="lyric">Oh, when I'm on, when I'm on my way, yeah</p>
+            <p class="lyric">When I see, when I see the way, you stay-yeah</p>
+            <p class="lyric">Ooh, yeah-yeah, ooh, yeah-yeah, when I'm down</p>
+            <p class="lyric">Ooh, yeah-yeah, ooh, yeah-yeah, but I'm down, so down</p>
+    </div>
+</section>
+</body>
+
+
