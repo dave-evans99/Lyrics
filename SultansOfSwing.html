@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sultans of Swing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./SongLyrics.js" ></script>
+
+    <style>
+        .currentBeat {
+            font-weight: bold;
+            color: red;
+            font-size: large;
+        }
+       
+        #words {
+            overflow-y: scroll;
+            height: 800px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    /* Test */
+    "use strict";
+
+    currentBeat = 1;
+    bpm = 115;
+    scrollSpeedSeconds = 7; 
+
+</script>
+
+
+
+    <section>
+        <div class="container">
+            <div class="p-2">
+                <button id="btnStart" type="button" class="button is-primary">Start</button>
+                <button id="btnStop" type="button" class="button is-danger" >Stop</button>
+
+                <a class="button is-link" href="./Index.html">Back to menu</a>
+
+                <label id="currentLine"></label>
+            </div>
+        
+            <div>
+                <span>
+                    <label id="label1">1</label>
+                    <label id="label2">2</label>
+                    <label id="label3">3</label>
+                    <label id="label4">4</label>
+                </span>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="words" class="container has-text-centered" >
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 1</p>
+            <p class="lyric" data-pause="20">You get a shiver in the dark</p>
+            <p class="lyric" >It's raining in the park but meantime</p>
+            <p class="lyric" >South of the river you stop and you hold everything</p>
+            <p class="lyric" >A band is blowing Dixie double four time</p>
+            <p class="lyric" >You feel alright when you hear that music ring</p>
+            <p class="music is-hidden" >Short break</p>
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 2</p>
+            <p class="lyric" >Well, now you step inside but you don't see too many faces</p>
+            <p class="lyric" >Coming in out of the rain to hear the jazz go down</p>
+            <p class="lyric" >Competition in other places</p>
+            <p class="lyric" >Oh, but the horns, they're blowing that sound</p>
+            <p class="lyric" >Way on down south, way on down south London town</p>
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 3</p>
+            <p class="lyric" >You check out guitar, George</p>
+            <p class="lyric" >He knows all the chords</p>
+            <p class="lyric" >Mind it's strictly rhythm</p>
+            <p class="lyric" >He doesn't wanna make it cry or sing</p>
+            <p class="lyric" >Left-handed old guitar is all he can afford</p>
+            <p class="lyric" >When he gets up under the lights to play his thing</p>
+            <p class="music is-hidden" >Short break</p>
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 4</p>
+            <p class="lyric" >And Harry doesn't mind if he doesn't make the scene</p>
+            <p class="lyric" >He's got a daytime job, he's doing alright</p>
+            <p class="lyric" >He can play the honky tonk like anything</p>
+            <p class="lyric" >Saving it up for Friday night</p>
+            <p class="lyric" >With the Sultans, with the Sultans of Swing</p>
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 5</p>
+            <p class="lyric"  data-pause="35" >And a crowd of young boys, they're fooling around in the corner</p>
+            <p class="lyric" >Drunk and dressed in their best brown baggies and their platform soles</p>
+            <p class="lyric" >They don't give a damn about any trumpet-playing band</p>
+            <p class="lyric" >It ain't what they call "Rock 'n' Roll"</p>
+            <p class="lyric" >And the Sultans, yeah, the Sultans, they play Creole, Creole</p>
+            <p class="music is-hidden">Guitar Solo 1</p>
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 6</p>
+            <p class="lyric"   data-pause="20">And then the man, he steps right up to the microphone</p>
+            <p class="lyric" >And says at last just as the time bell rings</p>
+            <p class="lyric" >Goodnight, now it's time to go home.</p>
+            <p class="lyric" >Then he makes it fast with one more thing,</p>
+            <p class="lyric" >We are the Sultans, we are the Sultans of Swing.</p>
+            <p class="music is-hidden" >Guitar Solo 2</p>
+
+
+    </div>
+</section>
+</body>
+
+
