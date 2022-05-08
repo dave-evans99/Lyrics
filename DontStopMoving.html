@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dpn't Stop Movin'</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./SongLyrics.js" ></script>
+
+    <style>
+        .currentBeat {
+            font-weight: bold;
+            color: red;
+            font-size: large;
+        }
+       
+        #words {
+            overflow-y: scroll;
+            height: 800px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    /* Test */
+    "use strict";
+
+    currentBeat = 1;
+    bpm = 85;
+    scrollSpeedSeconds = 3.1; 
+
+</script>
+
+
+
+    <section>
+        <div class="container">
+            <div class="p-2">
+                <button id="btnStart" type="button" class="button is-primary">Start</button>
+                <button id="btnStop" type="button" class="button is-danger" >Stop</button>
+
+                <a class="button is-link" href="./Index.html">Back to menu</a>
+
+                <label id="currentLine"></label>
+            </div>
+        
+            <div>
+                <span>
+                    <label id="label1">1</label>
+                    <label id="label2">2</label>
+                    <label id="label3">3</label>
+                    <label id="label4">4</label>
+                </span>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="words" class="container has-text-centered" >
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" data-pause="20">Verse 1</p>
+            <p class="lyric">DJ's got the party started</p>
+            <p class="lyric">theres no end in sight</p>
+            <p class="lyric">Everybody's moving to the</p>
+            <p class="lyric">rhythm that's inside</p>
+            <p class="lyric">It's a crazy world</p>
+            <p class="lyric">But tonight's the right situation</p>
+            <p class="lyric">Don't get left behind</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 2</p>
+            <p class="lyric">I can feel the music</p>
+            <p class="lyric">moving through me everywhere</p>
+            <p class="lyric">Ain't no destination baby</p>
+            <p class="lyric">We don't even care</p>
+            <p class="lyric">There's a place to be</p>
+            <p class="lyric">If you need the right education</p>
+            <p class="lyric">Let it take you there</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">B Section</p>
+            <p class="lyric">Just go</p>
+            <p class="lyric">with the magic baby</p>
+            <p class="lyric">I can see it there in your eyes (I can see it there in your eyes)</p>
+            <p class="lyric">Let it flow</p>
+            <p class="lyric">Stop the waiting</p>
+            <p class="lyric">Right here on the dance floor</p>
+            <p class="lyric">is where you gotta let it go</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>
+            <p class="lyric">Don't stop movin'</p>
+            <p class="lyric">Can you feel the music</p>
+            <p class="lyric">DJ's got us going around, 'round</p>
+            <p class="lyric">Don't stop movin'</p>
+            <p class="lyric">find your own way to it</p>
+            <p class="lyric">Listen to the music</p>
+            <p class="lyric">taking you to places that you've never been before</p>
+            <p class="lyric">Baby now</p>
+
+            <p class="lyric">Don't stop moving to the funky funky beat</p>
+            <p class="lyric">Don't stop moving to the S Club beat</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 3</p>
+            <p class="lyric">You can touch the moment</p>
+            <p class="lyric">Almost feel it in the air</p>
+            <p class="lyric">Don't know where we're going</p>
+            <p class="lyric">Baby, we don't even care</p>
+            <p class="lyric">Ain't no mystery</p>
+            <p class="lyric">Just use your imagination</p>
+            <p class="lyric">Let it take you there</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Bridge 2</p>
+            <p class="lyric">Just go</p>
+            <p class="lyric">with the magic baby</p>
+            <p class="lyric">I can see it there in your eyes (I can see it there in your eyes)</p>
+            <p class="lyric">Let it flow</p>
+            <p class="lyric">Stop the waiting</p>
+            <p class="lyric">Right here on the dance floor</p>
+            <p class="lyric">is where you gotta let it go</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>
+            <p class="lyric">Don't stop movin'</p>
+            <p class="lyric">Can you feel the music</p>
+            <p class="lyric">DJ's got us going around, 'round (don't stop movin')</p>
+            <p class="lyric">Don't stop movin'</p>
+            <p class="lyric">find your own way to it</p>
+            <p class="lyric">Listen to the music</p>
+            <p class="lyric">taking you to places that you've never been before</p>
+            <p class="lyric">Baby now</p>
+
+            <p class="lyric">Don't stop moving to the funky funky beat</p>
+            <p class="lyric">Don't stop moving to the funky funky beat</p>
+            <p class="lyric">Don't stop moving to the funky funky beat</p>
+            <p class="lyric">Don't stop moving to the S Club beat</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Break</p>
+            <p class="lyric">Forget about your fears tonight</p>
+            <p class="lyric">Listen to your heart</p>
+            <p class="lyric">Let's just touch the sky (listen to your heart)</p>
+            <p class="lyric">No need to reason why</p>
+            <p class="lyric">Just listen to the sound</p>
+            <p class="lyric">Let it make you come alive</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>
+            <p class="lyric">Don't stop movin'</p>
+            <p class="lyric">Can you feel the music</p>
+            <p class="lyric">DJ's got us going around, 'round (don't stop movin')</p>
+            <p class="lyric">Don't stop movin'</p>
+            <p class="lyric">find your own way to it</p>
+            <p class="lyric">Listen to the music</p>
+            <p class="lyric">(Yeah yeah yeah)</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>
+            <p class="lyric">Don't stop movin'</p>
+            <p class="lyric">Can you feel the music</p>
+            <p class="lyric">DJ's got us going around, 'round (don't stop moving)</p>
+            <p class="lyric">Don't stop movin'</p>
+            <p class="lyric">find your own way to it</p>
+            <p class="lyric">Listen to the music</p>
+            <p class="lyric">taking you to places that you've never been before</p>
+            <p class="lyric">Baby now</p>
+
+            <p class="lyric">Don't stop moving to the funky funky beat</p>
+            <p class="lyric">Don't stop moving to the funky funky beat</p>
+            <p class="lyric">Don't stop moving to the funky funky beat</p>
+            <p class="lyric">Don't stop moving to the S Club beat</p>
+
+    </div>
+</section>
+</body>
+
+
