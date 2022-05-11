@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>American Pie</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./SongLyrics.js" ></script>
+
+    <style>
+        .currentBeat {
+            font-weight: bold;
+            color: red;
+            font-size: large;
+        }
+       
+        #words {
+            overflow-y: scroll;
+            height: 800px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    currentBeat = 1;
+    bpm = 80;
+    scrollSpeedSeconds = 3; 
+
+</script>
+
+
+
+    <section>
+        <div class="container">
+            <div class="p-2">
+                <button id="btnStart" type="button" class="button is-primary">Start</button>
+                <button id="btnStop" type="button" class="button is-danger" >Stop</button>
+
+                <a class="button is-link" href="./Index.html">Back to menu</a>
+
+                <label id="currentLine"></label>
+            </div>
+        
+            <div>
+                <span>
+                    <label id="label1">1</label>
+                    <label id="label2">2</label>
+                    <label id="label3">3</label>
+                    <label id="label4">4</label>
+                </span>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="words" class="container has-text-centered" >
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" data-pause="10">Verse 1</p>
+
+            <p class="chords is-hidden">  G     D/F#    Em7</p>
+            <p class="lyric">A long, long time ago</p>
+            <p class="chords is-hidden">Am            C                  Em                  D</p>
+            <p class="lyric">I can still remember how that music used to make me smile</p>
+            <p class="chords is-hidden">    G      D/F#   Em7</p>
+            <p class="lyric">And I knew if I had my chance</p>
+            <p class="chords is-hidden">     Am                 C                Em              C            D</p>
+            <p class="lyric" data-pause="10">That I could make those people dance and maybe they'd be happy for a while</p>
+            <p class="chords is-hidden">    Em       Am              Em                 Am</p>
+            <p class="lyric">But February made me shiver, with every paper I'd deliver</p>
+            <p class="chords is-hidden">C        G/B    Am             C                     D</p>
+            <p class="lyric">Bad news on the doorstep, I couldn't take one more step</p>
+            <p class="chords is-hidden">  G          D/F#     Em           Am7            D</p>
+            <p class="lyric" >I can't remember if I cried when I read about his widowed bride</p>
+            <p class="chords is-hidden">G         D/F#       Em</p>
+            <p class="lyric">Something touched me deep inside</p>
+            <p class="chords is-hidden">    C      D7      G</p>
+            <p class="lyric">The day the music died</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>
+
+            <p class="chords is-hidden">   G    C        G        D</p>
+            <p class="lyric">So bye, bye Miss American Pie</p>
+            <p class="chords is-hidden">         G            C            G        D</p>
+            <p class="lyric">Drove my Chevy to the levy but the levy was dry</p>
+            <p class="chords is-hidden">         G        C                  G           D</p>
+            <p class="lyric">And them good old boys were drinkin' whiskey and rye</p>
+            <p class="chords is-hidden">        Em*                         A7*   Em*                         D7</p>
+            <p class="lyric">Singin' this will be the day that I die, this will be the day that I die</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 2</p>
+
+            <p class="chords is-hidden">G                 Am</p>
+            <p class="lyric" data-pause="10">Did you write the book of love</p>
+            <p class="chords is-hidden">       C                 Am         Em           D</p>
+            <p class="lyric">And do you have faith in God above, if the bible tells you so?</p>
+            <p class="chords is-hidden">G      D/F#        Em</p>
+            <p class="lyric">Do you believe in rock and roll</p>
+            <p class="chords is-hidden">    Am7            C              Em                 A7           D</p>
+            <p class="lyric">Can chords save your mortal soul and can you teach me how to dance real slow?</p>
+            <p class="chords is-hidden">       Em*                  D*                   Em*             D*</p>
+            <p class="lyric">Well I know that you're in love with him 'cuz I saw you dancin' in the gym</p>
+            <p class="chords is-hidden">    C           G/B      Am           C                    D7</p>
+            <p class="lyric">You both kicked off your shoes, man I dig those rhythm and blues</p>
+            <p class="chords is-hidden">        G      D/F#     Em                   Am                   C</p>
+            <p class="lyric">I was a lonely teenage bronckin' buck with a pink carnation and a pickup truck</p>
+            <p class="chords is-hidden">    G     D/F#    Em              C       D7    G  C  G         D</p>
+            <p class="lyric">But I knew I was out of luck the day the music died,  I started singin'</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>
+
+            <p class="chords is-hidden">G    C        G        D</p>
+            <p class="lyric">Bye, bye Miss American Pie</p>
+            <p class="chords is-hidden">         G            C            G        D</p>
+            <p class="lyric">Drove my Chevy to the levy but the levy was dry</p>
+            <p class="chords is-hidden">         G        C                  G           D</p>
+            <p class="lyric">And them good old boys were drinkin' whiskey and rye</p>
+            <p class="chords is-hidden">        Em*                         A7*   Em*                         D7</p>
+            <p class="lyric">Singin' this will be the day that I die, this will be the day that I die</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Verse 3</p>
+
+            <p class="chords is-hidden">         G                   Am</p>
+            <p class="lyric" data-pause="10">Now for ten years we've been on our own</p>
+            <p class="chords is-hidden">      C                   Am          Em                     D</p>
+            <p class="lyric">and moss grows fat on a rolling stone but that's not how it used to be</p>
+            <p class="chords is-hidden">          G     D/F#            Em</p>
+            <p class="lyric">When the jester sang for the king and queen</p>
+            <p class="chords is-hidden">     Am7                C                   Em             A7          D</p>
+            <p class="lyric">in a coat he borrowed from James Dean in a voice that came from you and me</p>
+            <p class="chords is-hidden">         Em*                 D*               Em*                 D*</p>
+            <p class="lyric">Oh, and while the king was looking down, the jester stole his thorny crown</p>
+            <p class="chords is-hidden">     C        G/B   A7       C                D7</p>
+            <p class="lyric">The courtroom was adjourned, no verdict was returned</p>
+            <p class="chords is-hidden">          G         D/F#  Em             Am           C</p>
+            <p class="lyric">And while Lennin read a book on Marx, the quartet practiced in the park</p>
+            <p class="chords is-hidden">    G       D/F#   Em               C       D7    G  C  G        D</p>
+            <p class="lyric">And we sang dirges in the dark the day the music died,   we were singin'</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Chorus</p>
+
+            <p class="chords is-hidden">G    C        G        D</p>
+            <p class="lyric">Bye, bye Miss American Pie</p>
+            <p class="chords is-hidden">         G            C            G        D</p>
+            <p class="lyric">Drove my Chevy to the levy but the levy was dry</p>
+            <p class="chords is-hidden">         G        C                  G           D</p>
+            <p class="lyric">And them good old boys were drinkin' whiskey and rye</p>
+            <p class="chords is-hidden">        Em*                         A7*   Em*                         D7</p>
+            <p class="lyric">Singin' this will be the day that I die, this will be the day that I die</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Verse 4</p>
+
+            <p class="chords is-hidden">G                   Am</p>
+            <p class="lyric" data-pause="10">Helter skelter in a summer swelter</p>
+            <p class="chords is-hidden">C                      Am                 Em                     D</p>
+            <p class="lyric">the birds flew off with a fallout shelter, eight miles high and fallin' fast</p>
+            <p class="chords is-hidden">      G   D/F#  Em</p>
+            <p class="lyric">It landed foul on the grass</p>
+            <p class="chords is-hidden">      Am7                C            Em                             A7     D</p>
+            <p class="lyric">the players tried for a forward pass, with the jester on the sidelines in a cast</p>
+            <p class="chords is-hidden">         Em*               D*                  Em*                 D*</p>
+            <p class="lyric">Now the half-time air was sweet perfume, while sergeants played a marching tune</p>
+            <p class="chords is-hidden">C          G/B      A7      C                  D7</p>
+            <p class="lyric">We all got up to dance, but we never got the chance</p>
+            <p class="chords is-hidden">         G        D/F#     Em             Am                  Cm        C</p>
+            <p class="lyric">'Cuz the players tried to take the field, the marching band refused to yield</p>
+            <p class="chords is-hidden">G         D/F#      Em               C       D7    G  C  G           D</p>
+            <p class="lyric">Do you recall what was revealed the day the music died,   we started singin'</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Chorus</p>
+
+            <p class="chords is-hidden">G    C        G        D</p>
+            <p class="lyric">Bye, bye Miss American Pie</p>
+            <p class="chords is-hidden">         G            C            G        D</p>
+            <p class="lyric">Drove my Chevy to the levy but the levy was dry</p>
+            <p class="chords is-hidden">         G        C                  G           D</p>
+            <p class="lyric">And them good old boys were drinkin' whiskey and rye</p>
+            <p class="chords is-hidden">        Em*                         A7*   Em*                         D7</p>
+            <p class="lyric">Singin' this will be the day that I die, this will be the day that I die</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Verse 5</p>
+
+            <p class="chords is-hidden">     G                Am</p>
+            <p class="lyric" data-pause="10">And there we were all in one place</p>
+            <p class="chords is-hidden">    C        Am            Em                   D</p>
+            <p class="lyric">a generation lost in space, with no time left to start again</p>
+            <p class="chords is-hidden">            G      D/F#   Em               Am7                 C</p>
+            <p class="lyric">So come on Jack be nimble, Jack be quick, Jack Flash sat on a candle</p>
+            <p class="chords is-hidden">       Em                   A7             D</p>
+            <p class="lyric">stick, 'cuz fire is the devil's only friend</p>
+            <p class="chords is-hidden">     Em*              D*               Em*                    D*</p>
+            <p class="lyric">And as I watched him on the stage, my hands were clenched in fists of rage</p>
+            <p class="chords is-hidden">   C      G/B    A7         C                  D7</p>
+            <p class="lyric">No angel born in Hell could break that Satan's spell</p>
+            <p class="chords is-hidden">           G            D/F#      Em             Am              C</p>
+            <p class="lyric">And as the flames climbed high into the night to light the sacrificial rite</p>
+            <p class="chords is-hidden">      G     D/F#     Em                C       D7    G  C  G       D</p>
+            <p class="lyric">I saw Satan laughing with delight the day the music died,   he was singin'</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Chorus</p>
+
+            <p class="chords is-hidden">G    C        G        D</p>
+            <p class="lyric">Bye, bye Miss American Pie</p>
+            <p class="chords is-hidden">         G            C            G        D</p>
+            <p class="lyric">Drove my Chevy to the levy but the levy was dry</p>
+            <p class="chords is-hidden">         G        C                  G           D</p>
+            <p class="lyric">And them good old boys were drinkin' whiskey and rye</p>
+            <p class="chords is-hidden">        Em*                         A7*   Em*                         D7</p>
+            <p class="lyric">Singin' this will be the day that I die, this will be the day that I die</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Verse 6</p>
+
+            <p class="chords is-hidden">  G    D/F#       Em</p>
+            <p class="lyric" data-pause="10">I met a girl who sang the blues</p>
+            <p class="chords is-hidden">      Am                 C               Em                      D</p>
+            <p class="lyric">And I asked her for some happy news, but she just smiled and turned away</p>
+            <p class="chords is-hidden">  G       D/F#      Em</p>
+            <p class="lyric">I went down to the sacred store</p>
+            <p class="chords is-hidden">       Am              C                     Em                 C</p>
+            <p class="lyric">Where I'd heard the music years before, but the man there said the music</p>
+            <p class="chords is-hidden">         D</p>
+            <p class="lyric">wouldn't play</p>
+            <p class="chords is-hidden">    Em*                Am*                    Em*                  Am*</p>
+            <p class="lyric">But in the streets the children screamed, the lovers cried and the poets dreamed</p>
+            <p class="chords is-hidden">    C     G/B      Am          C                     D</p>
+            <p class="lyric">But not a word was spoken, the church bells all were broken</p>
+            <p class="chords is-hidden">        G       D/F#   Em            Am7     C             D7</p>
+            <p class="lyric">And the three men I admire most, the Father, Son, and the Holy Ghost</p>
+            <p class="chords is-hidden">G             D/F#          Em               C       D7    G</p>
+            <p class="lyric">They caught the last train for the coast the day the music died,</p>
+            <p class="chords is-hidden">N.C.</p>
+            <p class="lyric">And they were singin'</p>
+
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Chorus</p>
+
+            <p class="chords is-hidden">G    C        G        D</p>
+            <p class="lyric" data-pause="10">Bye, bye Miss American Pie</p>
+            <p class="chords is-hidden">         G            C            G        D</p>
+            <p class="lyric">Drove my Chevy to the levy but the levy was dry</p>
+            <p class="chords is-hidden">         G        C                  G           D</p>
+            <p class="lyric">And them good old boys were drinkin' whiskey and rye</p>
+            <p class="chords is-hidden">        Em*                         A7*   Em*                         D7</p>
+            <p class="lyric">Singin' this will be the day that I die, this will be the day that I die</p>
+            <p class="chords is-hidden">                  G    C        G        D</p>
+            <p class="lyric">They were singin' bye, bye Miss American Pie</p>
+            <p class="chords is-hidden">         G            C            G        D</p>
+            <p class="lyric">Drove my Chevy to the levy but the levy was dry</p>
+            <p class="chords is-hidden">         G        C                  G           D</p>
+            <p class="lyric">And them good old boys were drinkin' whiskey and rye</p>
+            <p class="chords is-hidden">        C                D7         G   C   G</p>
+            <p class="lyric">Singin' this will be the day that I die</p>
+
+
+    </div>
+</section>
+</body>
+
+

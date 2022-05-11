@@ -20,7 +20,7 @@ function highlightRows(scroll) {
         });
     }
     
-    $('p:not(.text)').removeClass('has-background-primary has-background-info has-text-white is-size-5 mg-small pl-3 mt-2 mb-2'); 
+    $('p:not(.text)').removeClass('has-background-primary is-family-monospace has-background-info has-text-white is-size-5 mg-small pl-3 mt-2 mb-2'); 
 
     let selector = '';
 
@@ -34,6 +34,8 @@ function highlightRows(scroll) {
     
     $lines.filter('.lyric').addClass('has-background-primary has-text-white is-size-5 mg-small pl-3');
     $lines.filter('.music').addClass('has-background-info has-text-white is-size-5 mg-small pl-3 mt-2 mb-2')
+                            .removeClass('is-hidden');
+    $lines.filter('.chords').addClass('has-background-info is-family-monospace has-text-white is-size-5 mg-small pl-3 mt-2 mb-2')
                             .removeClass('is-hidden');
     
                     
@@ -61,6 +63,7 @@ $(function() {
                 return;
             
             let currentPause = $('#words p:nth-child(' + currentStartLine + ')').data('pause');
+            let localScrollSpeed = $('#words p:nth-child(' + currentStartLine + ')').data('scrollspeed');            
 
             highlightRows(true);
                 
