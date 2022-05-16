@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pride and Joy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./SongLyrics.js" ></script>
+
+    <style>
+        .currentBeat {
+            font-weight: bold;
+            color: red;
+            font-size: large;
+        }
+       
+        #words {
+            overflow-y: scroll;
+            height: 800px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    currentBeat = 1;
+    bpm = 117;
+    scrollSpeedSeconds = 4; 
+
+</script>
+
+
+
+    <section>
+        <div class="container">
+            <div class="p-2">
+                <button id="btnStart" type="button" class="button is-primary">Start</button>
+                <button id="btnStop" type="button" class="button is-danger" >Stop</button>
+
+                <a class="button is-link" href="./Index.html">Back to menu</a>
+
+                <label id="currentLine"></label>
+            </div>
+        
+            <div>
+                <span>
+                    <label id="label1">1</label>
+                    <label id="label2">2</label>
+                    <label id="label3">3</label>
+                    <label id="label4">4</label>
+                </span>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="words" class="container has-text-centered" >
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" data-pause="35">Verse 1</p>
+            <p class="lyric">Well, you've heard about love givin' sight to the blind</p>
+            <p class="lyric">My baby lovin' cause the sun to shine</p>
+            <p class="lyric">She my sweet little thing</p>
+            <p class="lyric">She my pride and joy</p>
+            <p class="lyric">She my sweet little baby</p>
+            <p class="lyric">I'm her little lover boy</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Verse 2</p>
+            <p class="lyric">Yeah, I love my baby</p>
+            <p class="lyric">Heart and soul</p>
+            <p class="lyric">Love like ours won't never grow old</p>
+            <p class="lyric">She my sweet little thing</p>
+            <p class="lyric">She my pride and joy</p>
+            <p class="lyric">She my sweet little baby</p>
+            <p class="lyric">I'm her little lover boy</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Break 1</p>
+            <p class="lyric">Yeah, I love my Lady</p>
+            <p class="lyric">She long and lean</p>
+            <p class="lyric">You mess with her</p>
+            <p class="lyric">You'll see a man get mean</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Verse 3</p>
+            <p class="lyric" data-pause="30">She my sweet little thing</p>
+            <p class="lyric">She my pride and joy</p>
+            <p class="lyric">She my sweet little baby</p>
+            <p class="lyric">I'm her little lover boy</p>
+            
+            <p class="music is-hidden" >Solo 1</p>
+            <p class="music is-hidden" >Solo 2</p>
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Break 2</p>
+            <p class="lyric">Well, I love my baby</p>
+            <p class="lyric">Like the finest wine</p>
+            <p class="lyric">Stick with her until the end of time</p>
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse 4</p>
+            <p class="lyric">She my sweet little thing</p>
+            <p class="lyric">She my pride and joy</p>
+            <p class="lyric">She my sweet little baby</p>
+            <p class="lyric">I'm her little lover boy</p>
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white" >Verse 5</p>
+            <p class="lyric">Yeah, I love my baby</p>
+            <p class="lyric">Heart and soul</p>
+            <p class="lyric">Love like ours won't never grow old</p>
+            <p class="lyric">She my sweet little thing</p>
+            <p class="lyric">She my pride and joy</p>
+            <p class="lyric">She my sweet little baby</p>
+            <p class="lyric">I'm her little lover boy</p>
+
+            <p class="music is-hidden" >Solo 3</p>
+
+
+    </div>
+</section>
+</body>
+
+
