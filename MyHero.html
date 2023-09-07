@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Everlong</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./SongLyrics.js" ></script>
+
+    <style>
+        .currentBeat {
+            font-weight: bold;
+            color: red;
+            font-size: large;
+        }
+       
+        #words {
+            overflow-y: scroll;
+            height: 800px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    /* Test */
+    "use strict";
+
+    currentBeat = 1;
+    bpm = 70;
+    scrollSpeedSeconds = 6; 
+
+</script>
+
+
+
+    <section>
+        <div class="container">
+            <div class="p-2">
+                <button id="btnStart" type="button" class="button is-primary">Start</button>
+                <button id="btnStop" type="button" class="button is-danger" >Stop</button>
+
+                <a class="button is-link" href="./Index.html">Back to menu</a>
+
+                <label id="currentLine"></label>
+            </div>
+        
+            <div>
+                <span>
+                    <label id="label1">1</label>
+                    <label id="label2">2</label>
+                    <label id="label3">3</label>
+                    <label id="label4">4</label>
+                </span>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="words" class="container has-text-centered" >
+
+            <p data-pause="20" class="text pl-2 has-text-left has-background-info has-text-white">Verse 1</p>
+            <p class="lyric" data-pause="15">Too alarming now to talk about</p>
+            <p class="lyric">Take your pictures down and shake it out</p>
+            <p class="lyric">Truth or consequence, say it aloud</p>
+            <p class="lyric">Use that evidence, race it around</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>            
+            <p class="lyric">There goes my hero</p>
+            <p class="lyric">Watch him as he goes</p>
+            <p class="lyric">There goes my hero</p>
+            <p class="lyric">He's ordinary</p>
+
+            <p data-pause="20" class="text pl-2 has-text-left has-background-info has-text-white">Verse 2</p>            
+            <p class="lyric">Don't the best of them bleed it out</p>
+            <p class="lyric">While the rest of them peter out</p>
+            <p class="lyric">Truth or consequence, say it aloud</p>
+            <p class="lyric">Use that evidence, race it around</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>            
+            <p class="lyric">There goes my hero</p>
+            <p class="lyric">Watch him as he goes</p>
+            <p class="lyric">There goes my hero</p>
+            <p class="lyric">He's ordinary</p>
+
+            <p data-pause="10" class="text pl-2 has-text-left has-background-info has-text-white">Bridge</p>            
+            <p class="lyric">Kudos, my hero</p>
+            <p class="lyric">Leaving all the mess</p>
+            <p class="lyric">You know my hero</p>
+            <p class="lyric">The one that's on</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>            
+            <p class="lyric">There goes my hero</p>
+            <p class="lyric">Watch him as he goes</p>
+            <p class="lyric">There goes my hero</p>
+            <p class="lyric">He's ordinary</p>
+
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>            
+            <p class="lyric">There goes my hero</p>
+            <p class="lyric">Watch him as he goes</p>
+            <p class="lyric">There goes my hero</p>
+            <p class="lyric">He's ordinary</p>
+
+    </div>
+</section>
+</body>
+
+
