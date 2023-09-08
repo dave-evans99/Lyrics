@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Everlong</title>
+    <title>My Hero</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="lyrics.css" intergrity="f6+hPqEI9shGsPaTtK2qymz5C8sB5vj+hkKnq/mvX0c=" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./SongLyrics.js" ></script>
 
@@ -45,32 +46,32 @@
                 <a class="button is-link" href="./Index.html">Back to menu</a>
 
                 <label id="currentLine"></label>
-            </div>
-        
-            <div>
-                <span>
-                    <label id="label1">1</label>
-                    <label id="label2">2</label>
-                    <label id="label3">3</label>
-                    <label id="label4">4</label>
-                </span>
-
-
-            </div>
+            </div>             
         </div>
     </section>
 
    
 
-    <section>
+    <section style="position: relative" >
+
+        
         <div id="words" class="container has-text-centered" >
 
-            <div style="position: fixed; top: 100px; left: 800px; font-size: 48px; color: red;">
+            <div id="metronome_1" class="metronome_one">
                 1
-            </div>
-
-            <p data-pause="20" class="text pl-2 has-text-left has-background-info has-text-white">Verse 1</p>
-            <p class="lyric" data-pause="15">Too alarming now to talk about</p>
+            </div>             
+            <div id="metronome_2" class="metronome">
+                2
+            </div>             
+            <div id="metronome_3" class="metronome">
+                3
+            </div>             
+            <div id="metronome_4" class="metronome">
+                4
+            </div>             
+   
+            <p data-pause="30" class="text pl-2 has-text-left has-background-info has-text-white">Verse 1</p>
+            <p class="lyric" >Too alarming now to talk about</p>
             <p class="lyric">Take your pictures down and shake it out</p>
             <p class="lyric">Truth or consequence, say it aloud</p>
             <p class="lyric">Use that evidence, race it around</p>
@@ -93,6 +94,8 @@
             <p class="lyric">There goes my hero</p>
             <p class="lyric">He's ordinary</p>
 
+            <p class="music is-hidden" >Short break</p>
+
             <p data-pause="10" class="text pl-2 has-text-left has-background-info has-text-white">Bridge</p>            
             <p class="lyric">Kudos, my hero</p>
             <p class="lyric">Leaving all the mess</p>
@@ -111,6 +114,7 @@
             <p class="lyric">Watch him as he goes</p>
             <p class="lyric">There goes my hero</p>
             <p class="lyric">He's ordinary</p>
+
 
     </div>
 </section>

@@ -12,10 +12,10 @@ var pauseUntil;
 function highlightRows(scroll) {
     let wordsDiv = $('#words');
 
-    let $currentLine = $('#words p:nth-child(' + currentStartLine + ')');
+    let $currentLine = $('#words p:nth-of-type(' + currentStartLine + ')');
     
     if ($currentLine.length > 0) {
-        $('#words p:nth-child(' + currentStartLine + ')')[0].scrollIntoView({
+        $('#words p:nth-of-type(' + currentStartLine + ')')[0].scrollIntoView({
             behavior: "smooth"
         });
     }
@@ -44,6 +44,7 @@ function highlightRows(scroll) {
 $(function() {
 
     $('#btnStop').hide();
+    $('.metronome, .metronome_one').hide();
 
     $('#btnStart').click(function() {
 
@@ -62,8 +63,8 @@ $(function() {
             if (pauseUntil != null && new Date() < pauseUntil)
                 return;
             
-            let currentPause = $('#words p:nth-child(' + currentStartLine + ')').data('pause');
-            let localScrollSpeed = $('#words p:nth-child(' + currentStartLine + ')').data('scrollspeed');            
+            let currentPause = $('#words p:nth-of-type(' + currentStartLine + ')').data('pause');
+            let localScrollSpeed = $('#words p:nth-of-type(' + currentStartLine + ')').data('scrollspeed');            
 
             highlightRows(true);
                 
@@ -85,11 +86,11 @@ $(function() {
 
         beatTimer = window.setInterval(function() {
 
-            let currentLabel = '#label' + currentBeat;
+            let currentMetronomeBeat = '#metronome_' + currentBeat;
 
-            $('label').removeClass('currentBeat');
-            $(currentLabel).addClass('currentBeat');
-
+            $('.metronome, .metronome_one').hide();
+            $(currentMetronomeBeat).show();
+            
             if (currentBeat == 4)
                 currentBeat = 1;
             else
