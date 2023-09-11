@@ -31,16 +31,63 @@
   }
   
   @media all and (min-width:801px) and (max-width: 959px) {
+      .metronome_one {
+        color: blueviolet;
+        position: fixed;
+        left: 35em;
+        top: 7.5em;
+        font-size: larger;
+        font-weight: bold;
+        height: 2em;
+        width: 2em;
+        background-color: lightpink;
+        border-radius: 0.5em;
+        padding-top: 0.15em;
+    }
+
     .metronome {
-        color: orange;
+        color: violet;
+        position: fixed;
+        left: 35em;
+        top: 7.5em;
+        font-size: larger;
+        font-weight: bold;
+        height: 2em;
+        width: 2em;
+        background-color: lightblue;
+        border-radius: 0.5em;
+        padding-top: 0.15em;
     }
   }
   
   @media all and (min-width:769px) and (max-width: 800px) {
-    .metronome {
-        color: black;
-    }
+    .metronome_one {
+      color:brown;
+      position: fixed;
+      left: 35em;
+      top: 7.5em;
+      font-size: larger;
+      font-weight: bold;
+      height: 2em;
+      width: 2em;
+      background-color: lightpink;
+      border-radius: 0.5em;
+      padding-top: 0.15em;
+  }
 
+  .metronome {
+      color:cyan;
+      position: fixed;
+      left: 35em;
+      top: 7.5em;
+      font-size: larger;
+      font-weight: bold;
+      height: 2em;
+      width: 2em;
+      background-color: lightblue;
+      border-radius: 0.5em;
+      padding-top: 0.15em;
+  }
   }
   
   @media all and (min-width:569px) and (max-width: 768px) {
@@ -74,19 +121,91 @@
   }
   
   @media all and (min-width:481px) and (max-width: 568px) {
-    .metronome {
-        color: purple;
-    }
+    .metronome_one {
+      color:brown;
+      position: fixed;
+      left: 35em;
+      top: 7.5em;
+      font-size: larger;
+      font-weight: bold;
+      height: 2em;
+      width: 2em;
+      background-color: lightpink;
+      border-radius: 0.5em;
+      padding-top: 0.15em;
+  }
+
+  .metronome {
+      color:cyan;
+      position: fixed;
+      left: 35em;
+      top: 7.5em;
+      font-size: larger;
+      font-weight: bold;
+      height: 2em;
+      width: 2em;
+      background-color: lightblue;
+      border-radius: 0.5em;
+      padding-top: 0.15em;
+  }
   }
   
   @media all and (min-width:321px) and (max-width: 480px) {
-    .metronome {
-        color: red;
-    }
+    .metronome_one {
+      color:brown;
+      position: fixed;
+      left: 35em;
+      top: 7.5em;
+      font-size: larger;
+      font-weight: bold;
+      height: 2em;
+      width: 2em;
+      background-color: lightpink;
+      border-radius: 0.5em;
+      padding-top: 0.15em;
+  }
+
+  .metronome {
+      color:cyan;
+      position: fixed;
+      left: 35em;
+      top: 7.5em;
+      font-size: larger;
+      font-weight: bold;
+      height: 2em;
+      width: 2em;
+      background-color: lightblue;
+      border-radius: 0.5em;
+      padding-top: 0.15em;
+  }
   }
   
   @media all and (min-width:0px) and (max-width: 320px) {
+      .metronome_one {
+        color:darkorange;
+        position: fixed;
+        left: 35em;
+        top: 7.5em;
+        font-size: larger;
+        font-weight: bold;
+        height: 2em;
+        width: 2em;
+        background-color: lightpink;
+        border-radius: 0.5em;
+        padding-top: 0.15em;
+    }
+
     .metronome {
-        color: blue;
+        color:cornsilk;
+        position: fixed;
+        left: 35em;
+        top: 7.5em;
+        font-size: larger;
+        font-weight: bold;
+        height: 2em;
+        width: 2em;
+        background-color: lightblue;
+        border-radius: 0.5em;
+        padding-top: 0.15em;
     }
   }
