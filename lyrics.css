@@ -65,7 +65,7 @@
     .metronome_one {
         color: red;
         position: fixed;
-        left: 6em;
+        left: 5em;
         top: 3em;
         font-size: xx-large;
         font-weight: bold;
@@ -73,13 +73,13 @@
         width: 2em;
         background-color: lightpink;
         border-radius: 0.5em;
-        padding-top: 0.15em;
+        padding-top: 0.2em;
     }
 
     .metronome {
         color: blue;
         position: fixed;
-        left: 6em;
+        left: 5em;
         top: 3em;
         font-size: xx-large;
         font-weight: bold;
@@ -87,7 +87,7 @@
         width: 2em;
         background-color: lightblue;
         border-radius: 0.5em;
-        padding-top: 0.15em;
+        padding-top: 0.2em;
     }
   }
   
