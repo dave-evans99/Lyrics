@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fairy Tale of New York</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="lyrics.css" intergrity="f6+hPqEI9shGsPaTtK2qymz5C8sB5vj+hkKnq/mvX0c=" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./SongLyrics.js" ></script>
+
+    <style>
+        .currentBeat {
+            font-weight: bold;
+            color: red;
+            font-size: large;
+        }
+       
+        #words {
+            overflow-y: scroll;
+            height: 800px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    /* Test */
+    "use strict";
+
+    currentBeat = 1;
+    bpm = 70;
+    scrollSpeedSeconds = 6; 
+
+</script>
+
+
+
+    <section>
+        <div class="container">
+            <div class="p-2">
+                <button id="btnStart" type="button" class="button is-primary">Start</button>
+                <button id="btnStop" type="button" class="button is-danger" >Stop</button>
+
+                <a class="button is-link" href="./Index.html">Back to menu</a>
+
+                <label id="currentLine"></label>
+            </div>             
+        </div>
+    </section>
+
+    <section style="position: relative" >        
+        <div id="words" class="container has-text-centered" >
+
+            <div id="metronome_1" class="metronome_one">
+                1
+            </div>             
+            <div id="metronome_2" class="metronome">
+                2
+            </div>             
+            <div id="metronome_3" class="metronome">
+                3
+            </div>             
+            <div id="metronome_4" class="metronome">
+                4
+            </div>             
+
+            <p data-pause="30" class="music is-hidden">Piano introduction</p>
+            <p class="music is-hidden">Violin comes in</p>
+   
+            <p class="chords is-hidden">F  C  F  G  C  G</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Intro part 1</p>
+            <p class="chords is-hidden">G                C               F</p>
+            <p class="lyric">It was Christmas Eve, babe, in the drunk tank</p>
+            <p class="chords is-hidden">C                       Gsus4</p>
+            <p class="lyric">An old man said to me "Won't see another one"</p>
+
+            <p class="chords is-hidden">G           C                      F</p>
+            <p class="lyric">And then he sang a song - The Rare Old Mountain Dew</p>
+            <p class="chords is-hidden">C                    G     C</p>
+            <p class="lyric">I turned my face away and dreamed about you</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Intro part 2</p>            
+            <p class="chords is-hidden">G        C                     F</p>
+            <p class="lyric">Got on a lucky one came in eighteen to one</p>
+            <p class="chords is-hidden">C                       Gsus4</p>
+            <p class="lyric">I've got a feeling this year's for me and you</p>
+            <p class="chords is-hidden">G        C                    F</p>
+            <p class="lyric">So, Happy Christmas I love you, baby</p>
+            <p class="chords is-hidden">C                        Gsus4       C</p>
+            <p class="lyric">I can see a better time when all our dreams come true</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Break</p>
+            <p class="chords is-hidden">C  F  Gsus4</p>
+            <p class="chords is-hidden">C    G  C  F  G  C</p>
+            
+            <p data-pause="20" class="text pl-2 has-text-left has-background-info has-text-white">Verse 2</p>
+            <p class="chords is-hidden">C    G                Am        F</p>
+            <p class="lyric">They've got cars big as bars, they've got rivers of gold</p>
+            <p class="chords is-hidden">C                   G</p>
+            <p class="lyric">But the wind goes right through you, it's no place for the old</p>
+            <p class="chords is-hidden">C             Am        C              F</p>
+            <p class="lyric">When you first took my hand on a cold Christmas Eve</p>
+            <p class="chords is-hidden">C               G        C</p>
+            <p class="lyric">You promised me Broadway was waiting for me</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse</p>            
+            <p class="chords is-hidden">C                              G</p>
+            <p class="lyric">You were handsome, you were pretty, Queen of New York City</p>
+            <p class="chords is-hidden"> C             F             G              C</p>
+            <p class="lyric">When the band finished playing they howled out for more</p>
+            <p class="chords is-hidden">C                           G</p>
+            <p class="lyric">Sinatra was swinging all the drunks, they were singing</p>
+            <p class="chords is-hidden">C           F           G                  C</p>
+            <p class="lyric">We kissed on a corner then danced through the night</p>
+
+            <p data-pause="10" class="text pl-2 has-text-left has-background-info has-text-white">Bridge</p>            
+            <p class="chords is-hidden">F           Am   G          C              Am</p>
+            <p class="lyric">The boys of the NYPD choir were singing "Galway Bay"</p>
+            <p class="chords is-hidden">C                  G                 C</p>
+            <p class="lyric">And the bells were ringing out for Christmas day</p>
+                
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Break</p>
+            <p class="chords is-hidden">C  G  Am  F  C    G</p>
+            <p class="chords is-hidden">C  Am  C  F  C    G  C</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse</p>            
+            <p class="chords is-hidden">C                     F</p>
+            <p class="lyric">You're a bum, you're a punk you're an old slut on junk</p>
+            <p class="chords is-hidden">     C            F         G            C</p>
+            <p class="lyric">Lying there almost dead on a drip in that bed</p>
+            <p class="chords is-hidden">C                                   G</p>
+            <p class="lyric">You scumbag, you maggot you cheap, lousy faggot</p>
+            <p class="chords is-hidden">C              F           G            C</p>
+            <p class="lyric">Happy Christmas, your arse I pray God it's our last</p>
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>            
+            <p class="chords is-hidden">F           Am   G          C              Am</p>
+            <p class="lyric">The boys of the NYPD choir still singing "Galway Bay"</p>
+            <p class="chords is-hidden">C                  G                 C</p>
+            <p class="lyric">And the bells are ringing out for Christmas day</p>
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Link 2</p>
+            <p class="chords is-hidden">C      F      C      F     G  C  G</p>
+            
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Verse</p>            
+            <p class="chords is-hidden">C                          F</p>
+            <p class="lyric">"I could have been someone", well, so could anyone</p>
+            <p class="chords is-hidden">C                           Gsus4</p>
+            <p class="lyric">You took my dreams from me when I first found you</p>
+            <p class="chords is-hidden">           C                       F</p>
+            <p class="lyric">I kept them with me, babe, I put them with my own</p>
+            <p class="chords is-hidden">C                       F      G      C     C</p>
+            <p class="lyric">Can't make it all alone I've built my dreams around you</p>
+
+            <p class="text pl-2 has-text-left has-background-info has-text-white">Chorus</p>            
+            <p class="chords is-hidden">F           Am   G          C              Am</p>
+            <p class="lyric">The boys of the NYPD choir still singing "Galway Bay"</p>
+            <p class="chords is-hidden">C                  G                 C</p>
+            <p class="lyric">And the bells are ringing out for Christmas day</p>
+            
+    </div>
+</section>
+</body>
+
+
